@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoSlots - Онлайн Казино</title>
+    <style>
+        /* Базові стилі та обнулення */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a2e;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Шапка сайту */
+        header {
+            background-color: #162447;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #e43f5a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e43f5a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .auth-buttons .btn {
+            padding: 8px 18px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-login {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff !important;
+        }
+
+        .btn-login:hover {
+            background-color: #fff;
+            color: #162447;
+        }
+
+        .btn-register {
+            background-color: #e43f5a;
+            color: #fff;
+        }
+
+        .btn-register:hover {
+            background-color: #ff4b6e;
+            box-shadow: 0 0 10px #e43f5a;
+        }
+
+        /* Банер / Героїчний блок */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.9)), url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #00ffcc;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Секція ігор */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-left: 5px solid #e43f5a;
+            padding-left: 10px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background-color: #162447;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #1f4068;
+            cursor: pointer;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(228, 63, 90, 0.3);
+            border-color: #e43f5a;
+        }
+
+        .game-img {
+            width: 100%;
+            height: 150px;
+            background-color: #1f4068;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .game-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .game-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .btn-play {
+            background-color: #00ffcc;
+            color: #1a1a2e;
+            border: none;
+            padding: 6px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-play:hover {
+            background-color: #00ccaa;
+        }
+
+        /* Підвал */
+        footer {
+            background-color: #111;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 60px;
+            border-top: 1px solid #222;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .warning {
+            color: #ff4b6e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header>
+        <div class="logo">🎰 CryptoSlots</div>
+        <div class="auth-buttons">
+            <button class="btn btn-login" onclick="alert('Форма входу')">Вхід</button>
+            <button class="btn btn-register" onclick="alert('Форма реєстрації')">Реєстрація</button>
+        </div>
+    </header>
+
+    <!-- Головний банер -->
+    <section class="hero">
+        <h1>Вітальний Бонус +200%</h1>
+        <p>Отримай до 50 000 ₴ та 250 Фріспінів прямо зараз!</p>
+        <button class="btn btn-register" style="padding: 15px 30px; font-size: 18px;" onclick="alert('Реєстрація активована!')">Забрати Бонус</button>
+    </section>
+
+    <!-- Секція з іграми -->
+    <main class="main-container">
+        <h2 class="section-title">Популярні Ігри</h2>
+        
+        <div class="games-grid">
+            <!-- Гра 1 -->
+            <div class="game-card" onclick="alert('Запуск гри: Book of Ra')">
+                <div class="game-img">📖</div>
+                <div class="game-info">
+                    <div class="game-title">Book of Ra</div>
+                    <button class="btn-play">Грати</button>
+                </div>
+            </div>
+
+            <!-- Гра 2 -->
+            <div class="game-card" onclick="alert('Запуск гри: Fruit Cocktail')">
+                <div class="game-img">🍓</div>
+                <div class="game-info">
+                    <div class="game-title">Fruit Cocktail</div>
+                    <button class="btn-play">Грати</button>
+                </div>
+            </div>
+
+            <!-- Гра 3 -->
+            <div class="game-card" onclick="alert('Запуск гри: Crazy Monkey')">
+                <div class="game-img">🐒</div>
+                <div class="game-info">
+                    <div class="game-title">Crazy Monkey</div>
+                    <button class="btn-play">Грати</button>
+                </div>
+            </div>
+
+            <!-- Гра 4 -->
+            <div class="game-card" onclick="alert('Запуск гри: Roulette Deluxe')">
+                <div class="game-img">🎡</div>
+                <div class="game-info">
+                    <div class="game-title">Roulette Deluxe</div>
+                    <button class="btn-play">Грати</button>
+                </div>
+            </div>
+
+            <!-- Гра 5 -->
+            <div class="game-card" onclick="alert('Запуск гри: Blackjack Pro')">
+                <div class="game-img">🃏</div>
+                <div class="game-info">
+                    <div class="game-title">Blackjack Pro</div>
+                    <button class="btn-play">Грати</button>
+                </div>
+            </div>
+
+            <!-- Гра 6 -->
+            <div class="game-card" onclick="alert('Запуск гри: Lucky Lady\'s Charm')">
+                <div class="game-img">🔮</div>
+                <div class="game-info">
+                    <div class="game-title">Lucky Lady's Charm</div>
+                    <button class="btn-play">Грати</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Підвал сайту -->
+    <footer>
+        <p>&copy; 2026 CryptoSlots Casino. Всі права захищені.</p>
+        <p class="warning">🔞 Грайте відповідально. Азартні ігри можуть викликати залежність. Тільки для осіб старше 21 року.</p>
+    </footer>
+
+</body>
+</html>
